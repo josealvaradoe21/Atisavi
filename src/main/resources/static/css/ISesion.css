@@ -1,0 +1,130 @@
+#nav{
+   height: 62px;
+   background-color:#07926f;
+   text-align: center;
+ }
+
+ #nav ul{
+    list-style: none;
+    display: inline-block;
+   margin: 0;
+   padding: 0;
+ }
+
+ #nav ul li{
+     float: left;
+     margin-top: 20px;
+ }
+
+ #nav ul li a {
+     color: white;
+     font-weight: bold;
+     text-decoration: none;
+     font-size: 20px;
+     padding: 20px;
+ }
+
+ #nav ul li a:hover{
+   background-color: #929fb3;
+ }
+
+ li {
+   border-right: 1px solid #bbb;
+}
+
+li:last-child {
+   border-right: none;
+}
+
+
+ h1{
+    color: forestgreen;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    
+ }
+
+ p{
+    text-align: center;
+    font-size: 75px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+
+ body{
+   background-color: transparent;
+   color: #384047;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin: 0;
+   padding: 0;
+   font-family: "Roboto", sans-serif;
+ }
+
+
+ form {
+   min-width: 480px;
+   max-width: 480px;
+   margin-left: 500px;
+   padding: 10px 20px;
+   background: #d8eca0;
+   border-radius: 8px;
+   margin-top: 60px;
+   margin-right: 300px;
+ }
+
+
+
+ input[type="text"],
+textarea,
+select {
+ background: rgba(255,255,255,0.1);
+ border: none;
+ font-size: 16px;
+ height: auto;
+ margin: 0;
+ outline: 0;
+ padding: 5px;
+ width: 100%;
+ background-color: #e8eeef;
+ color: #8a97a0;
+ box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+ margin-bottom: 30px;
+}
+
+input[type="radio"]
+{
+ margin: 0 4px 8px 0;
+}
+
+
+button {
+ padding: 19px 39px 18px 39px;
+ color: #FFF;
+ background-color: #1db374;
+ font-size: 18px;
+ text-align: center;
+ font-style: normal;
+ border-radius: 5px;
+ width: 100%;
+ border: 1px solid #101111;
+ border-width: 1px 1px 3px;
+ box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+ margin-bottom: 10px;
+}
+
+button:hover {
+ background-color: #19B3D3;
+}
+
+
+label {
+ display: block;
+ margin-bottom: 8px;
+}
+
+
+

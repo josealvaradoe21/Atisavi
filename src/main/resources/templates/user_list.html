@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Lista</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/atisavi.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.min.css}">
+</head>
+
+
+<body>
+<div id="navbar" class="collapse navbar-collapse" style="width: 1024px; margin-left: 7%;"> 
+			</div>  
+			<div id ="izquierda">
+			<div style="text-align: right; margin-bottom: 5px;">
+        <a th:href="@{/admin/add}" class="btn btn-success" role="button">Pacientes</a>
+        <a th:href="@{/admin/add}" class="btn btn-success" role="button">Citas</a>
+        <a th:href="@{/admin/add}" class="btn btn-success" role="button">Crear citas</a>
+    </div>
+    <ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+	    </ul>
+    <table class="table table-bordered"> 
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th> 
+            <th>Teléfono</th>
+            <th>Email</th> 
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="usuarios : ${usuarios}">
+            <td th:text="${usuarios.id}"></td>
+            <td th:text="${usuarios.firstName}"></td>
+            <td th:text="${usuarios.lastName}"></td>
+            <td th:text="${usuarios.phone}"></td>
+            <td th:text="${usuarios.email}"></td> 
+            <td>
+                <a th:href="@{/admin/edit/{id}(id=${usuarios.id})}" class="btn btn-success btn-sm" role="button">Actualizar</a>
+                <a th:href="@{/admin/delete/{id}(id=${usuarios.id})}" class="btn btn-danger btn-sm" role="button">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table> 
+			</div>
+			<div id ="derecha">
+				
+			</div> 
+			
+			<div id ="pie">
+  	
+  	<p>Lima, Peru. 2020</p></div>
+	 
+	</body>
+	</html>		

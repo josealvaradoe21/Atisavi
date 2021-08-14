@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="alert alert-success"> 
+<div class="container">
+    <h5>Añadir/Editar</h5>
+    <form action="#" th:action="@{/admin/addEdit}" method="post" th:object="${administradores}">
+    	
+        Nombre:<br/>
+        <input type="text" class="form-control" id="nombre" th:field="*{firstName}" placeholder="Nombre"/>
+        <br/>
+        Apellido:<br/>
+        <input type="text" class="form-control" id="apellido" th:field="*{lastName}" placeholder="Apellido"/>
+        <br/> 
+        Telefono:<br/>
+        <input type="text" class="form-control" id="telefono" th:field="*{phone}" placeholder="Telefono"/>
+        <br/> 
+        Email:<br/> 
+        <input  type="text" class="form-control" id="email" th:field="*{mail}" placeholder="Email"/>
+        Password:<br/>
+        <input type="text" class="form-control" id="password" th:field="*{pass}" placeholder="password"/>
+        <br/> 
+        <br/> 
+        <button type="submit" class="btn btn-info" >Aceptar</button>
+    </form>
+</div>
+</body>
+</html>
